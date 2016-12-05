@@ -5,7 +5,7 @@ TChain * chV = new TChain("trV");
 const char * fname[] = {
 	"test/",				// 0
 	"../SC/PAHighPt/crab_pPb5_SC_eff_noff_v1/161109_221029/0000/",					// 1 pPb 5 TeV 2013 HM
-	"../SC/HIMinimumBias5/crab_HIMB5_SC_ppReco_eff_noff_v2/161123_105949/0000/",			// 2 PbPb 5 TeV pp reco
+	"NA",												// 2 PbPb 5 TeV pp reco
 	"../SC/PAHighMultiplicity0/crab_PAHM0_SC_eff_v3/161201_194804/0000/",				// 3 pPb 8 TeV HM0
 	"../SC/PAHighMultiplicity1/crab_PAHM1_SC_eff_v3/161201_194322/0000/",				// 4 pPb 8 TeV HM1
 	"../SC/PAHighMultiplicity2/crab_PAHM2_SC_eff_v3/161201_194345/0000/",				// 5 pPb 8 TeV HM2
@@ -24,6 +24,8 @@ const char * fname[] = {
 	"../SC/PAMinimumBias7/crab_PAMB7_SC_eff_v2/161201_160134/0000/",				// 18 pPb 8 TeV MB7
 	"../SC/PAMinimumBias8/crab_PAMB8_SC_eff_v2/161201_160144/0000/",				// 19 pPb 8 TeV MB8
 	"NA",												// 20 pPb 8 TeV MB[1-8]
+	"../SC/HIMinimumBias5/crab_HIMB5_SC_ppReco_eff_noff_v3/161201_171433/0000/",			// 21 PbPb 5 TeV HIMB5 pp reco
+	"../SC/HIMinimumBias6/crab_HIMB6_SC_ppReco_eff_noff_v3/161201_171451/0000/",			// 22 PbPb 5 TeV HIMB6 pp reco
 };
 
 const char * ftxt[] = {
@@ -48,6 +50,8 @@ const char * ftxt[] = {
 	"txt/pPb8_MB7_2016/",				// 18
 	"txt/pPb8_MB8_2016/",				// 19
 	"txt/pPb8_MB_2016/",				// 20
+	"txt/PbPb5_HIMB5_ppReco_2015/",			// 21
+	"txt/PbPb5_HIMB6_ppReco_2015/",			// 22
 };
 
 void addchain(int s1, string s)
