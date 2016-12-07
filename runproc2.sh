@@ -1,5 +1,0 @@
-root -l -b -q 'process.C+(3, "QWSC2_2")'
-root -l -b -q 'process.C+(3, "QWSC3_3")'
-root -l -b -q 'process.C+(3, "QWSC4_4")'
-root -l -b -q 'process.C+(3, "QWSC5_5")'
-root -l -b -q 'process.C+(3, "QWSC6_6")'

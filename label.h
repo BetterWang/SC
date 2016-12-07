@@ -6,17 +6,17 @@ const char * fname[] = {
 	"test/",				// 0
 	"../SC/PAHighPt/crab_pPb5_SC_eff_noff_v1/161109_221029/0000/",					// 1 pPb 5 TeV 2013 HM
 	"NA",												// 2 PbPb 5 TeV pp reco
-	"../SC/PAHighMultiplicity0/crab_PAHM0_SC_eff_v3/161201_194804/0000/",				// 3 pPb 8 TeV HM0
-	"../SC/PAHighMultiplicity1/crab_PAHM1_SC_eff_v3/161201_194322/0000/",				// 4 pPb 8 TeV HM1
+	"../SCuser/PAHighMultiplicity0/crab_PAHM0_SC_eff_v5/161206_112807/0000/",			// 3 pPb 8 TeV HM0
+	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_rerun_v5/161206_152905/0000/",			// 4 pPb 8 TeV HM1
 	"../SC/PAHighMultiplicity2/crab_PAHM2_SC_eff_v3/161201_194345/0000/",				// 5 pPb 8 TeV HM2
 	"../SC/PAHighMultiplicity3/crab_PAHM3_SC_eff_v3/161201_194402/0000/",				// 6 pPb 8 TeV HM3
 	"../SC/PAHighMultiplicity4/crab_PAHM4_SC_eff_v3/161201_194425/0000/",				// 7 pPb 8 TeV HM4
 	"../SC/PAHighMultiplicity5/crab_PAHM5_SC_eff_v3/161201_194445/0000/",				// 8 pPb 8 TeV HM5
 	"../SC/PAHighMultiplicity6/crab_PAHM6_SC_eff_v3/161201_194514/0000/",				// 9 pPb 8 TeV HM6
-	"../SC/PAHighMultiplicity7/crab_PAHM7_SC_eff_v3/161201_194534/0000/",				// 10 pPb 8 TeV HM7
+	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_rerun_v5/161206_151200/0000/",			// 10 pPb 8 TeV HM7
 	"NA",												// 11 pPb 8 TeV HM[0-7]
-	"../SC/PAMinimumBias1/crab_PAMB1_SC_eff_v2/161201_160025/0000/",				// 12 pPb 8 TeV MB1
-	"../SC/PAMinimumBias2/crab_PAMB2_SC_eff_v2/161201_160037/0000/",				// 13 pPb 8 TeV MB2
+	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_v5/161206_110902/0000/",				// 12 pPb 8 TeV MB1
+	"../SCuser/PAMinimumBias2/crab_PAMB2_SC_eff_rerun_v5/161206_150512/0000/",			// 13 pPb 8 TeV MB2
 	"../SC/PAMinimumBias3/crab_PAMB3_SC_eff_v2/161201_160051/0000/",				// 14 pPb 8 TeV MB3
 	"../SC/PAMinimumBias4/crab_PAMB4_SC_eff_v2/161201_160103/0000/",				// 15 pPb 8 TeV MB4
 	"../SC/PAMinimumBias5/crab_PAMB5_SC_eff_v2/161201_160113/0000/",				// 16 pPb 8 TeV MB5
@@ -26,6 +26,35 @@ const char * fname[] = {
 	"NA",												// 20 pPb 8 TeV MB[1-8]
 	"../SC/HIMinimumBias5/crab_HIMB5_SC_ppReco_eff_noff_v3/161201_171433/0000/",			// 21 PbPb 5 TeV HIMB5 pp reco
 	"../SC/HIMinimumBias6/crab_HIMB6_SC_ppReco_eff_noff_v3/161201_171451/0000/",			// 22 PbPb 5 TeV HIMB6 pp reco
+	"../SCuser/PAHighMultiplicity0/crab_PAHM0_SC_eff_sysTight_v5/161206_112825/0000/",		// 23 pPb 8 TeV sysTight HM0
+	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_sysTight_v5/161206_113104/0000/",		// 24 pPb 8 TeV sysTight HM1
+	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_sysTight_rerun_v5/161206_155237/0000/",	// 25 pPb 8 TeV sysTight HM7
+	"NA",												// 26 pPb 8 TeV sysTight HM[0-7]
+	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_sysTight_v5/161206_110916/0000/",			// 27 pPb 8 TeV sysTight MB1
+	"../SCuser/PAMinimumBias2/crab_PAMB2_SC_eff_sysTight_v5/161206_111024/0000/",			// 28 pPb 8 TeV sysTight MB2
+	"NA",												// 29 pPb 8 TeV sysTight MB[1-3]
+	"../SCuser/PAHighMultiplicity0/crab_PAHM0_SC_eff_sysLoose_v5/161206_112845/0000/",		// 30 pPb 8 TeV sysLoose HM0
+	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_sysLoose_v5/161206_113220/0000/",		// 31 pPb 8 TeV sysLoose HM1
+	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_sysLoose_v5/161206_113456/0000/",		// 32 pPb 8 TeV sysLoose HM7
+	"NA",												// 33 pPb 8 TeV sysLoose HM[0-7]
+	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_sysLoose_v5/161206_110929/0000/",			// 34 pPb 8 TeV sysLoose MB1
+	"../SCuser/PAMinimumBias2/crab_PAMB2_SC_eff_sysLoose_v5/161206_111035/0000/",			// 35 pPb 8 TeV sysLoose MB2
+	"NA",												// 36 pPb 8 TeV sysLoose MB[1-3]
+	"../SCuser/PAHighMultiplicity0/crab_PAHM0_SC_eff_sysVzNarrow_resub_v5/161206_165244/0000/",	// 37 pPb 8 TeV sysVzNarrow HM0
+	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_sysVzNarrow_resub_v5/161206_165330/0000/",	// 38 pPb 8 TeV sysVzNarrow HM1
+	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_sysVzNarrow_resub_v5/161206_165414/0000/",	// 39 pPb 8 TeV sysVzNarrow HM7
+	"NA",												// 40 pPb 8 TeV sysVzNarrow HM[0-7]
+	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_sysVzNarrow_v5/161206_110944/0000/",		// 41 pPb 8 TeV sysVzNarrow MB1
+	"../SCuser/PAMinimumBias2/crab_PAMB2_SC_eff_sysVzNarrow_v5/161206_111050/0000/",		// 42 pPb 8 TeV sysVzNarrow MB2
+	"NA",												// 43 pPb 8 TeV sysVzNarrow MB[1-3]
+	"../SCuser/PAHighMultiplicity0/crab_PAHM0_SC_eff_sysVzWide_resub_v5/161206_165307/0000/",	// 44 pPb 8 TeV sysVzWide HM0
+	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_sysVzWide_resub_v5/161206_165349/0000/",	// 45 pPb 8 TeV sysVzWide HM1
+	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_sysVzWide_resub_v5/161206_165433/0000/",	// 46 pPb 8 TeV sysVzWide HM7
+	"NA",												// 47 pPb 8 TeV sysVzWide HM[0-7]
+	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_sysVzWide_v5/161206_110958/0000/",			// 48 pPb 8 TeV sysVzWide MB1
+	"../SCuser/PAMinimumBias2/crab_PAMB2_SC_eff_sysVzWide_v5/161206_111101/0000/",			// 49 pPb 8 TeV sysVzWide MB2
+	"NA",												// 50 pPb 8 TeV sysVzWide MB[1-3]
+
 };
 
 const char * ftxt[] = {
@@ -52,6 +81,34 @@ const char * ftxt[] = {
 	"txt/pPb8_MB_2016/",				// 20
 	"txt/PbPb5_HIMB5_ppReco_2015/",			// 21
 	"txt/PbPb5_HIMB6_ppReco_2015/",			// 22
+	"txt/pPb8_sysTight_HM0/",			// 23
+	"txt/pPb8_sysTight_HM1/",			// 24
+	"txt/pPb8_sysTight_HM7/",			// 25
+	"txt/pPb8_sysTight_HM/",			// 26
+	"txt/pPb8_sysTight_MB1/",			// 27
+	"txt/pPb8_sysTight_MB2/",			// 28
+	"txt/pPb8_sysTight_MB/",			// 29
+	"txt/pPb8_sysLoose_HM0/",			// 30
+	"txt/pPb8_sysLoose_HM1/",			// 31
+	"txt/pPb8_sysLoose_HM7/",			// 32
+	"txt/pPb8_sysLoose_HM/",			// 33
+	"txt/pPb8_sysLoose_MB1/",			// 34
+	"txt/pPb8_sysLoose_MB2/",			// 35
+	"txt/pPb8_sysLoose_MB/",			// 36
+	"txt/pPb8_sysVzNarrow_HM0/",			// 37
+	"txt/pPb8_sysVzNarrow_HM1/",			// 38
+	"txt/pPb8_sysVzNarrow_HM7/",			// 39
+	"txt/pPb8_sysVzNarrow_HM/",			// 40
+	"txt/pPb8_sysVzNarrow_MB1/",			// 41
+	"txt/pPb8_sysVzNarrow_MB2/",			// 42
+	"txt/pPb8_sysVzNarrow_MB/",			// 43
+	"txt/pPb8_sysVzWide_HM0/",			// 44
+	"txt/pPb8_sysVzWide_HM1/",			// 45
+	"txt/pPb8_sysVzWide_HM7/",			// 46
+	"txt/pPb8_sysVzWide_HM/",			// 47
+	"txt/pPb8_sysVzWide_MB1/",			// 48
+	"txt/pPb8_sysVzWide_MB2/",			// 49
+	"txt/pPb8_sysVzWide_MB/",			// 50
 };
 
 void addchain(int s1, string s)
