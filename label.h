@@ -17,8 +17,8 @@ const char * fname[] = {
 	"NA",												// 11 pPb 8 TeV HM[0-7]
 	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_v5/161206_110902/0000/",				// 12 pPb 8 TeV MB1
 	"../SCuser/PAMinimumBias2/crab_PAMB2_SC_eff_rerun_v5/161206_150512/0000/",			// 13 pPb 8 TeV MB2
-	"../SC/PAMinimumBias3/crab_PAMB3_SC_eff_v2/161201_160051/0000/",				// 14 pPb 8 TeV MB3
-	"../SC/PAMinimumBias4/crab_PAMB4_SC_eff_v2/161201_160103/0000/",				// 15 pPb 8 TeV MB4
+	"../SCuser/PAMinimumBias3/crab_PAMB3_SC_eff_v6/161207_085652/0000/",				// 14 pPb 8 TeV MB3
+	"../SCuser/PAMinimumBias4/crab_PAMB4_SC_eff_v6/161207_083512/0000/",				// 15 pPb 8 TeV MB4
 	"../SC/PAMinimumBias5/crab_PAMB5_SC_eff_v2/161201_160113/0000/",				// 16 pPb 8 TeV MB5
 	"../SC/PAMinimumBias6/crab_PAMB6_SC_eff_v2/161201_160124/0000/",				// 17 pPb 8 TeV MB6
 	"../SC/PAMinimumBias7/crab_PAMB7_SC_eff_v2/161201_160134/0000/",				// 18 pPb 8 TeV MB7
@@ -54,7 +54,23 @@ const char * fname[] = {
 	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_sysVzWide_v5/161206_110958/0000/",			// 48 pPb 8 TeV sysVzWide MB1
 	"../SCuser/PAMinimumBias2/crab_PAMB2_SC_eff_sysVzWide_v5/161206_111101/0000/",			// 49 pPb 8 TeV sysVzWide MB2
 	"NA",												// 50 pPb 8 TeV sysVzWide MB[1-3]
+	"../SCuser/PAMinimumBias3/crab_PAMB3_SC_eff_sysTight_v6/161207_083417/0000/",			// 51 pPb 8 TeV MB3 sysTight
+	"../SCuser/PAMinimumBias3/crab_PAMB3_SC_eff_sysLoose_v6/161207_085710/0000/",			// 52 pPb 8 TeV MB3 sysLoose
+	"../SCuser/PAMinimumBias3/crab_PAMB3_SC_eff_sysVzNarrow_v6/161207_083456/0000/",		// 53 pPb 8 TeV MB3 sysVzNarrow
+	"../SCuser/PAMinimumBias3/crab_PAMB3_SC_eff_sysVzWide_v6/161207_090042/0000/",			// 54 pPb 8 TeV MB3 sysVzWide
+	"../SCuser/PAMinimumBias4/crab_PAMB4_SC_eff_sysTight_v6/161207_083556/0000/",			// 55 pPb 8 TeV MB4 sysTight
+	"../SCuser/PAMinimumBias4/crab_PAMB4_SC_eff_sysLoose_v6/161207_085900/0000/",			// 56 pPb 8 TeV MB4 sysLoose
+	"../SCuser/PAMinimumBias4/crab_PAMB4_SC_eff_sysVzNarrow_v6/161207_083717/0000/",		// 57 pPb 8 TeV MB4 sysVzNarrow
+	"../SCuser/PAMinimumBias4/crab_PAMB4_SC_eff_sysVzWide_v6/161207_083729/0000/",			// 58 pPb 8 TeV MB4 sysVzWide
 
+	"../SCuser/PAHighMultiplicity0/crab_PAHM0_SC_eff_v7/161209_141445/0000/",			// 59 pPb 8 TeV HM0
+	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_v7/161209_141624/0000/",			// 60 pPb 8 TeV HM1
+	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_v7/161209_141759/0000/",			// 61 pPb 8 TeV HM7
+	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_v7/161209_204337/0000/",				// 62 pPb 8 TeV MB1
+	"../SCuser/PAHighMultiplicity0/crab_PAHM0_SC_eff_sysGplus_v7/161209_143931/0000/",		// 63 pPb 8 TeV HM0 sysGplus
+	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_sysGplus_v7/161209_143943/0000/",		// 64 pPb 8 TeV HM1 sysGplus
+	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_sysGplus_v7/161209_143956/0000/",		// 65 pPb 8 TeV HM7 sysGplus
+	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_sysGplus_v7/161209_145239/0000/",			// 66 pPb 8 TeV MB1 sysGplus
 };
 
 const char * ftxt[] = {
@@ -109,6 +125,22 @@ const char * ftxt[] = {
 	"txt/pPb8_sysVzWide_MB1/",			// 48
 	"txt/pPb8_sysVzWide_MB2/",			// 49
 	"txt/pPb8_sysVzWide_MB/",			// 50
+	"txt/pPb8_sysVzTight_MB3/",			// 51
+	"txt/pPb8_sysVzLoose_MB3/",			// 52
+	"txt/pPb8_sysVzVzNarrow_MB3/",			// 53
+	"txt/pPb8_sysVzVzWide_MB3/",			// 54
+	"txt/pPb8_sysVzTight_MB4/",			// 55
+	"txt/pPb8_sysVzLoose_MB4/",			// 56
+	"txt/pPb8_sysVzVzNarrow_MB4/",			// 57
+	"txt/pPb8_sysVzVzWide_MB4/",			// 58
+	"txt/pPb8_HM0_v7/",				// 59
+	"txt/pPb8_HM1_v7/",				// 60
+	"txt/pPb8_HM7_v7/",				// 61
+	"txt/pPb8_MB1_v7/",				// 62
+	"txt/pPb8_HM0_sysGplus_v7/",			// 63
+	"txt/pPb8_HM1_sysGplus_v7/",			// 64
+	"txt/pPb8_HM7_sysGplus_v7/",			// 65
+	"txt/pPb8_MB1_sysGplus_v7/",			// 66
 };
 
 void addchain(int s1, string s)
