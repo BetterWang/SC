@@ -71,6 +71,11 @@ const char * fname[] = {
 	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_sysGplus_v7/161209_143943/0000/",		// 64 pPb 8 TeV HM1 sysGplus
 	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_sysGplus_v7/161209_143956/0000/",		// 65 pPb 8 TeV HM7 sysGplus
 	"../SCuser/PAMinimumBias1/crab_PAMB1_SC_eff_sysGplus_v7/161209_145239/0000/",			// 66 pPb 8 TeV MB1 sysGplus
+	"testMB/",											// 67 test pPb 8 MB
+	"testHM0/",											// 68 test pPb 8 HM0
+	"testHM1/",											// 69 test pPb 8 HM1
+	"testHM7/",											// 70 test pPb 8 HM7
+	"testHM/",											// 71 test pPb 8 HM
 };
 
 const char * ftxt[] = {
@@ -141,6 +146,11 @@ const char * ftxt[] = {
 	"txt/pPb8_HM1_sysGplus_v7/",			// 64
 	"txt/pPb8_HM7_sysGplus_v7/",			// 65
 	"txt/pPb8_MB1_sysGplus_v7/",			// 66
+	"txt/testMB/",					// 67
+	"txt/testHM0/",					// 68
+	"txt/testHM1/",					// 69
+	"txt/testHM7/",					// 70
+	"txt/testHM/",					// 71
 };
 
 void addchain(int s1, string s)
