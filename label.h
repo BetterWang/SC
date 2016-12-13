@@ -76,6 +76,12 @@ const char * fname[] = {
 	"testHM1/",											// 69 test pPb 8 HM1
 	"testHM7/",											// 70 test pPb 8 HM7
 	"testHM/",											// 71 test pPb 8 HM
+	"../SCuser/PAHighMultiplicity0/crab_PAHM0_SC_eff_sysRevert1_v7/161212_123843/0000/",		// 72 pPb 8 TeV HM0 revert Golden JSON
+	"../SCuser/PAHighMultiplicity1/crab_PAHM1_SC_eff_sysRevert1_v7/161212_123855/0000/",		// 73 pPb 8 TeV HM1 revert Golden JSON
+	"../SCuser/PAHighMultiplicity7/crab_PAHM7_SC_eff_sysRevert1_v7/161212_123906/0000/",		// 74 pPb 8 TeV HM7 revert Golden JSON
+	"../SC/PAHighMultiplicity0/crab_PAHM0_SC_eff_sysRevert1_rerun_v7/161212_163557/0000/",		// 75 pPb 8 TeV HM0 revert DCS JSON
+	"../SC/PAHighMultiplicity1/crab_PAHM1_SC_eff_sysRevert1_rerun_v7/161212_163630/0000/",		// 76 pPb 8 TeV HM1 revert DCS JSON
+	"../SC/PAHighMultiplicity7/crab_PAHM7_SC_eff_sysRevert1_rerun_v7/161212_163359/0000/",		// 77 pPb 8 TeV HM7 revert DCS JSON
 };
 
 const char * ftxt[] = {
@@ -151,6 +157,12 @@ const char * ftxt[] = {
 	"txt/testHM1/",					// 69
 	"txt/testHM7/",					// 70
 	"txt/testHM/",					// 71
+	"txt/pPb8_HM0_sysRevert_v7/",			// 72
+	"txt/pPb8_HM1_sysRevert_v7/",			// 73
+	"txt/pPb8_HM7_sysRevert_v7/",			// 74
+	"txt/pPb8_HM0_sysRevert_rerun_v7/",		// 75
+	"txt/pPb8_HM1_sysRevert_rerun_v7/",		// 76
+	"txt/pPb8_HM7_sysRevert_rerun_v7/",		// 77
 };
 
 void addchain(int s1, string s)
