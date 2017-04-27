@@ -155,3 +155,49 @@ void trimGraph(TGraphErrors* gr, int limit)
 		}
 	}
 }
+
+TGraphErrors* mergeGraph(TGraphErrors* gr1, TGraphErrors* gr2)
+{
+	double x[100] = {};
+	double y[100] = {};
+	double e[100] = {};
+	int N = gr1->GetN() + gr2->GetN();
+
+	int idx = 0;
+	for ( int i = 0; i < gr1->GetN(); i++ ) {
+		x[idx] = gr1->GetX()[i];
+		y[idx] = gr1->GetY()[i];
+		e[idx] = gr1->GetEY()[i];
+		idx++;
+	}
+
+	for ( int i = 0; i < gr2->GetN(); i++ ) {
+		x[idx] = gr2->GetX()[i];
+		y[idx] = gr2->GetY()[i];
+		e[idx] = gr2->GetEY()[i];
+		idx++;
+	}
+
+	TGraphErrors * ret = new TGraphErrors(N, x, y, 0, e);
+	ret->SetMarkerStyle( gr1->GetMarkerStyle() );
+	ret->SetMarkerColor( gr1->GetMarkerColor() );
+	ret->SetMarkerSize( gr1->GetMarkerSize() );
+	ret->SetLineColor( gr1->GetLineColor() );
+
+	return ret;
+}
+
+TGraphErrors* ratioGraph(TGraphErrors* gr1, TGraphErrors* gr2)
+{
+	if ( gr1->GetN() != gr2->GetN() ) return nullptr;
+	double x[100];
+	double y[100];
+	double e[100];
+
+	for ( int i = 0; i < gr1->GetN(); i++ ) {
+		x[i] = gr1->GetX()[i];
+		y[i] = gr1->GetY()[i] / gr2->GetY()[i];
+		e[i] = gr2->GetEY()[i] / gr2->GetY()[i];
+	}
+	return new TGraphErrors(gr1->GetN(), x, y, 0, e);
+}

@@ -3,7 +3,7 @@
 #include "util.h"
 
 
-void plotDraw(int sMB = 12, int sHM = 11, int limit = 125, string tag = "")
+void plotPbPb(int sMB = 2, int sHM = 2, int limit = 500)
 {
 	TFile * fMB = new TFile(Form("%s/outGraph.root", ftxt[sMB]));
 	TFile * fHM = new TFile(Form("%s/outGraph.root", ftxt[sHM]));
@@ -122,11 +122,9 @@ void plotDraw(int sMB = 12, int sHM = 11, int limit = 125, string tag = "")
 	gr2424MB->Draw("psame");
 	gr2424HM->Draw("psame");
 
-	TLegend *leg = new TLegend(0.4, 0.67, 0.6, 0.93);
-	leg->AddEntry(gr2424MB, "SC(2,4) MB", "p");
-	leg->AddEntry(gr2424HM, "SC(2,4) HM", "p");
-	leg->AddEntry(gr2323MB, "SC(2,3) MB", "p");
-	leg->AddEntry(gr2323HM, "SC(2,3) HM", "p");
+	TLegend *leg = new TLegend(0.4, 0.80, 0.8, 0.93);
+	leg->AddEntry(gr2424MB, "SC(2,4) PbPb 5 TeV", "p");
+	leg->AddEntry(gr2323MB, "SC(2,3) PbPb 5 TeV", "p");
 
 	leg->Draw();
 
@@ -162,11 +160,9 @@ void plotDraw(int sMB = 12, int sHM = 11, int limit = 125, string tag = "")
 	gr3636MB->Draw("psame");
 	gr3636HM->Draw("psame");
 
-	TLegend *leg3 = new TLegend(0.4, 0.67, 0.6, 0.93);
-	leg3->AddEntry(gr3434MB, "SC(3,4) MB", "p");
-	leg3->AddEntry(gr3434HM, "SC(3,4) HM", "p");
-	leg3->AddEntry(gr3636MB, "SC(3,6) MB", "p");
-	leg3->AddEntry(gr3636HM, "SC(3,6) HM", "p");
+	TLegend *leg3 = new TLegend(0.4, 0.80, 0.8, 0.93);
+	leg3->AddEntry(gr3434MB, "SC(3,4) PbPb 5 TeV", "p");
+	leg3->AddEntry(gr3636MB, "SC(3,6) PbPb 5 TeV", "p");
 
 	leg3->Draw();
 
@@ -199,48 +195,22 @@ void plotDraw(int sMB = 12, int sHM = 11, int limit = 125, string tag = "")
 	gr4646MB->Draw("psame");
 	gr4646HM->Draw("psame");
 
-	TLegend *leg5 = new TLegend(0.4, 0.67, 0.6, 0.93);
-	leg5->AddEntry(gr4545MB, "SC(4,5) MB", "p");
-	leg5->AddEntry(gr4545HM, "SC(4,5) HM", "p");
-	leg5->AddEntry(gr4646MB, "SC(4,6) MB", "p");
-	leg5->AddEntry(gr4646HM, "SC(4,6) HM", "p");
+	TLegend *leg5 = new TLegend(0.4, 0.80, 0.8, 0.93);
+	leg5->AddEntry(gr4545MB, "SC(4,5) PbPb 5 TeV", "p");
+	leg5->AddEntry(gr4646MB, "SC(4,6) PbPb 5 TeV", "p");
 
 	leg5->Draw();
 
 
 
-	TGraphErrors * gr2323 = mergeGraph(gr2323MB, gr2323HM);
-	TGraphErrors * gr2424 = mergeGraph(gr2424MB, gr2424HM);
-	TGraphErrors * gr2525 = mergeGraph(gr2525MB, gr2525HM);
-	TGraphErrors * gr2626 = mergeGraph(gr2626MB, gr2626HM);
-
-	TGraphErrors * gr3434 = mergeGraph(gr3434MB, gr3434HM);
-	TGraphErrors * gr3535 = mergeGraph(gr3535MB, gr3535HM);
-	TGraphErrors * gr3636 = mergeGraph(gr3636MB, gr3636HM);
-
-	TGraphErrors * gr4545 = mergeGraph(gr4545MB, gr4545HM);
-	TGraphErrors * gr4646 = mergeGraph(gr4646MB, gr4646HM);
-
-	TGraphErrors * gr5656 = mergeGraph(gr5656MB, gr5656HM);
 
 
-	c->SaveAs("SC2324.pdf");
-	c1->SaveAs("SC3436.pdf");
-	c5->SaveAs("SC4546.pdf");
 
-	TFile * fsave = new TFile(Form("pPb8TeV%s.root", tag.c_str()), "recreate");
-	gr2323->Write("gr2323");
-	gr2424->Write("gr2424");
-	gr2525->Write("gr2525");
-	gr2626->Write("gr2626");
 
-	gr3434->Write("gr3434");
-	gr3535->Write("gr3535");
-	gr3636->Write("gr3636");
+	c ->SaveAs("SC2324PbPb.pdf");
+	c1->SaveAs("SC3436PbPb.pdf");
+	c5->SaveAs("SC4546PbPb.pdf");
 
-	gr4545->Write("gr4545");
-	gr4646->Write("gr4646");
 
-	gr5656->Write("gr5656");
 
 }

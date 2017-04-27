@@ -9,6 +9,10 @@ void bGet(int s1 = 1, string s = "QWSC2_3_2_3")
 
 	int NCent = NCentCommon;
 	double * CentNoffCut = CentNoffCutCommon;
+	if ( s1 == 2 ) {
+		CentNoffCut = CentNoffCutPbPb;
+		NCent = NCentPbPb;
+	}
 
 	TH1D * hSC = (TH1D*) f->Get("hSC");
 	TH1D * hSCw = (TH1D*) f->Get("hSCw");

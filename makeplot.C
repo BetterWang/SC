@@ -126,7 +126,15 @@ void makeplot(int s1=12)
 	double e55[100] = {};
 	double e66[100] = {};
 
-	for ( int i = 0; i < NCentCommon; i++ ) {
+	int NCent = NCentCommon;
+	double * CentX = CentNoffX;
+	if ( s1 == 2 ) {
+		NCent = NCentPbPb;
+		CentX = CentNoffXPbPb;
+	}
+
+
+	for ( int i = 0; i < NCent; i++ ) {
 		y2323[i] = h2323->GetBinContent(i+1);
 		y2424[i] = h2424->GetBinContent(i+1);
 		y2525[i] = h2525->GetBinContent(i+1);
@@ -168,25 +176,26 @@ void makeplot(int s1=12)
 		e66[i] = h66->GetBinError(i+1);
 	}
 
-	TGraphErrors * gr2323 = new TGraphErrors(NCentCommon, CentNoffX, y2323, 0, e2323);
-	TGraphErrors * gr2424 = new TGraphErrors(NCentCommon, CentNoffX, y2424, 0, e2424);
-	TGraphErrors * gr2525 = new TGraphErrors(NCentCommon, CentNoffX, y2525, 0, e2525);
-	TGraphErrors * gr2626 = new TGraphErrors(NCentCommon, CentNoffX, y2626, 0, e2626);
 
-	TGraphErrors * gr3434 = new TGraphErrors(NCentCommon, CentNoffX, y3434, 0, e3434);
-	TGraphErrors * gr3535 = new TGraphErrors(NCentCommon, CentNoffX, y3535, 0, e3535);
-	TGraphErrors * gr3636 = new TGraphErrors(NCentCommon, CentNoffX, y3636, 0, e3636);
+	TGraphErrors * gr2323 = new TGraphErrors(NCent, CentX, y2323, 0, e2323);
+	TGraphErrors * gr2424 = new TGraphErrors(NCent, CentX, y2424, 0, e2424);
+	TGraphErrors * gr2525 = new TGraphErrors(NCent, CentX, y2525, 0, e2525);
+	TGraphErrors * gr2626 = new TGraphErrors(NCent, CentX, y2626, 0, e2626);
 
-	TGraphErrors * gr4545 = new TGraphErrors(NCentCommon, CentNoffX, y4545, 0, e4545);
-	TGraphErrors * gr4646 = new TGraphErrors(NCentCommon, CentNoffX, y4646, 0, e4646);
+	TGraphErrors * gr3434 = new TGraphErrors(NCent, CentX, y3434, 0, e3434);
+	TGraphErrors * gr3535 = new TGraphErrors(NCent, CentX, y3535, 0, e3535);
+	TGraphErrors * gr3636 = new TGraphErrors(NCent, CentX, y3636, 0, e3636);
 
-	TGraphErrors * gr5656 = new TGraphErrors(NCentCommon, CentNoffX, y5656, 0, e5656);
+	TGraphErrors * gr4545 = new TGraphErrors(NCent, CentX, y4545, 0, e4545);
+	TGraphErrors * gr4646 = new TGraphErrors(NCent, CentX, y4646, 0, e4646);
 
-	TGraphErrors * gr22 = new TGraphErrors(NCentCommon, CentNoffX, y22, 0, e22);
-	TGraphErrors * gr33 = new TGraphErrors(NCentCommon, CentNoffX, y33, 0, e33);
-	TGraphErrors * gr44 = new TGraphErrors(NCentCommon, CentNoffX, y44, 0, e44);
-	TGraphErrors * gr55 = new TGraphErrors(NCentCommon, CentNoffX, y55, 0, e55);
-	TGraphErrors * gr66 = new TGraphErrors(NCentCommon, CentNoffX, y66, 0, e66);
+	TGraphErrors * gr5656 = new TGraphErrors(NCent, CentX, y5656, 0, e5656);
+
+	TGraphErrors * gr22 = new TGraphErrors(NCent, CentX, y22, 0, e22);
+	TGraphErrors * gr33 = new TGraphErrors(NCent, CentX, y33, 0, e33);
+	TGraphErrors * gr44 = new TGraphErrors(NCent, CentX, y44, 0, e44);
+	TGraphErrors * gr55 = new TGraphErrors(NCent, CentX, y55, 0, e55);
+	TGraphErrors * gr66 = new TGraphErrors(NCent, CentX, y66, 0, e66);
 
 	TFile * fsave = new TFile(Form("%s/outGraph.root", ftxt[s1]), "recreate");
 
