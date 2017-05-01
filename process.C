@@ -1,5 +1,5 @@
 #include "label.h"
-#include "noff.h"
+//#include "noff.h"
 #include <TFile.h>
 #include <TTree.h>
 #include <TH1.h>
@@ -7,9 +7,9 @@
 #include "complex"
 using namespace std;
 
-void process(int s1 = 1, string s = "QWSC2_3_2_3")
+void process(int s1 = 0, int s2 = 10, int s3 = 10, string s = "QWSC2_3_2_3")
 {
-	cout << " s1 = " << s1 << "\t s = " << s << endl;
+	cout << " s1 = " << s1 << " s2 = " << s2 << " s3 = " << s3 << "\t s = " << s << endl;
 	addchain(s1, s);
 	chV->SetMakeClass(1);
 	TH1::SetDefaultSumw2();
@@ -35,9 +35,11 @@ void process(int s1 = 1, string s = "QWSC2_3_2_3")
 	TH1D * hMult  = new TH1D("hMult", "hMult", 800, 0, 800);
 
 	unsigned int ievt = 0;
+	if (s2!=s3) ievt = s2;
 	while ( chV->GetEntry(ievt) ) {
-		if ( !((ievt)%100000) ) cout << "!! ievt = " << ievt << endl;
-		ievt++;
+		if ( !((ievt-s2)%100000) ) cout << "!! ievt = " << ievt << endl;
+		if ( s2 == s3 ) ievt++;
+		else ievt+= s3;
 		hSC->Fill(Noff, rQ);
 		hSCw->Fill(Noff, wQ);
 		hNoff->Fill(Noff);
@@ -45,7 +47,7 @@ void process(int s1 = 1, string s = "QWSC2_3_2_3")
 	}
 
 
-	TFile* fsave = new TFile(Form("%s/%s.root", ftxt[s1], s.c_str()), "recreate");
+	TFile* fsave = new TFile(Form("%s/%s_%i_%i.root", ftxt[s1], s.c_str(), s2, s3), "recreate");
 	hSC->Write();
 	hSCw->Write();
 	hNoff->Write();

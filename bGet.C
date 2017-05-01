@@ -3,16 +3,12 @@
 #include <TFile.h>
 #include <TH1.h>
 
-void bGet(int s1 = 1, string s = "QWSC2_3_2_3")
+void bGet(int s1 = 0, int s2 = 10, int s3 = 10, string s = "QWSC2")
 {
-	TFile * f = new TFile(Form("%s/%s.root", ftxt[s1], s.c_str()));
+	TFile * f = new TFile(Form("%s/%s_%i_%i_.root", ftxt[s1], s.c_str(), s2, s3));
 
-	int NCent = NCentCommon;
-	double * CentNoffCut = CentNoffCutCommon;
-	if ( s1 == 2 ) {
-		CentNoffCut = CentNoffCutPbPb;
-		NCent = NCentPbPb;
-	}
+	int NCent = NCent8TeV4;
+	double * CentNoffCut = CentNoffCutPA8TeV4;
 
 	TH1D * hSC = (TH1D*) f->Get("hSC");
 	TH1D * hSCw = (TH1D*) f->Get("hSCw");
@@ -27,6 +23,7 @@ void bGet(int s1 = 1, string s = "QWSC2_3_2_3")
 	TH1D * hSCNorm_merged = (TH1D*) hSC_merged->Clone("hSCNorm_merged");
 	hSCNorm_merged->Divide(hSCw_merged);
 
-	TFile* fsave = new TFile(Form("%s/out%s.root", ftxt[s1], s.c_str()), "recreate");
+	TFile* fsave = new TFile(Form("%s/out%s_%i_%i.root", ftxt[s1], s.c_str(), s2, s3), "recreate");
 	hSCNorm_merged->Write();
+	hSCw_merged->Write();
 }
