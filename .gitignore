@@ -18,5 +18,4 @@ core.*
 *.d
 *.pcm
 *.cxx_tmp
-run*.sh
 .DS_Store
