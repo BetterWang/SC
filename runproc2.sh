@@ -1,4 +1,4 @@
-#./runproc3.sh $1 $2 QWSC2
+./runproc3.sh $1 $2 QWSC2
 ./runproc3.sh $1 $2 QWSC3
 ./runproc3.sh $1 $2 QWSC4
 ./runproc3.sh $1 $2 QWSC22

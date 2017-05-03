@@ -29,6 +29,7 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10, string s = "QWSC2_3_2_3")
 	chV->SetBranchAddress("wQ", &wQ);
 
 	TH1D * hSC  = new TH1D("hSC",  s.c_str(), 800, 0, 800);
+	TH1D * hSCi = new TH1D("hSCi", s.c_str(), 800, 0, 800);
 	TH1D * hSCw = new TH1D("hSCw", s.c_str(), 800, 0, 800);
 
 	TH1D * hNoff  = new TH1D("hNoff", "hNoff", 800, 0, 800);
@@ -41,6 +42,7 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10, string s = "QWSC2_3_2_3")
 		if ( s2 == s3 ) ievt++;
 		else ievt+= s3;
 		hSC->Fill(Noff, rQ);
+		hSCi->Fill(Noff, iQ);
 		hSCw->Fill(Noff, wQ);
 		hNoff->Fill(Noff);
 		hMult->Fill(Mult);
@@ -49,6 +51,7 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10, string s = "QWSC2_3_2_3")
 
 	TFile* fsave = new TFile(Form("%s/%s_%i_%i.root", ftxt[s1], s.c_str(), s2, s3), "recreate");
 	hSC->Write();
+	hSCi->Write();
 	hSCw->Write();
 	hNoff->Write();
 	hMult->Write();
