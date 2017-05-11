@@ -7,7 +7,9 @@ const char * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_SC_Pixel_eff_cent_v1/170427_131539/0000/",			// 1 PbPb 5 TeV Pixel Cent
 	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_SC_Pixel_eff_cent_sysPosEta_v1/170504_142352/0000/",	// 2 PbPb 5 TeV Pixel Cent PosEta
 	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_SC_Pixel_eff_cent_sysNegEta_v3/170507_181919/0000/",	// 3 PbPb 5 TeV Pixel Cent NegEta
-	"../PbPb2015_cumu/MC/HIJING_SC_mod0/",									// 4 HIJING 5 TeV Pixel Cent NegEta
+	"../PbPb2015_cumu/MC/HIJING_SC_mod0/",									// 4 HIJING 5 TeV Pixel Cent
+	"../PbPb2015_cumu/MC/HIJING_SC_sysPosEta_mod0/",							// 5 HIJING 5 TeV Pixel Cent PosEta
+	"../PbPb2015_cumu/MC/HIJING_SC_sysNegEta_mod0/",							// 6 HIJING 5 TeV Pixel Cent NegEta
 };
 
 const char * ftxt[] = {
@@ -16,6 +18,8 @@ const char * ftxt[] = {
 	"txt/PbPb5TeV_Pixel_cent_PosEta/",		// 2
 	"txt/PbPb5TeV_Pixel_cent_NegEta/",		// 3
 	"txt/HIJING_fEllP_8pct_v2/",			// 4
+	"txt/HIJING_fEllP_8pct_v2_PosEta/",		// 5
+	"txt/HIJING_fEllP_8pct_v2_NegEta/",		// 6
 };
 
 void addchain(int s1, string s)

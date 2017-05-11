@@ -41,6 +41,10 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10, string s = "QWSC2_3_2_3")
 		if ( !((ievt-s2)%100000) ) cout << "!! ievt = " << ievt << endl;
 		if ( s2 == s3 ) ievt++;
 		else ievt+= s3;
+		if ( TMath::IsNaN(rQ) ) {
+			std::cout << "!!! NaN !!! " << chV->GetFile()->GetName() << std::endl;
+			continue;
+		}
 		hSC->Fill(Noff, rQ);
 		hSCi->Fill(Noff, iQ);
 		hSCw->Fill(Noff, wQ);
