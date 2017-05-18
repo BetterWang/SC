@@ -10,6 +10,7 @@ const char * fname[] = {
 	"../PbPb2015_cumu/MC/HIJING_SC_mod2_acc/",								// 4 HIJING 5 TeV Pixel Cent
 	"../PbPb2015_cumu/MC/HIJING_SC_sysPosEta_mod2_acc/",							// 5 HIJING 5 TeV Pixel Cent PosEta
 	"../PbPb2015_cumu/MC/HIJING_SC_sysNegEta_mod2_acc/",							// 6 HIJING 5 TeV Pixel Cent NegEta
+	"../PbPb2015_cumu/MC/HIJING_SC_8pc_mod1_acc/",								// 7 HIJING 5 TeV 8% full eta
 };
 
 const char * ftxt[] = {
@@ -20,6 +21,7 @@ const char * ftxt[] = {
 	"txt/HIJING_fEllP_8pct_v2/",			// 4
 	"txt/HIJING_fEllP_8pct_v2_PosEta/",		// 5
 	"txt/HIJING_fEllP_8pct_v2_NegEta/",		// 6
+	"txt/HIJING_fEllP_8pct_v2_mod1/",		// 7
 };
 
 void addchain(int s1, string s)
